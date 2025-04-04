@@ -1,0 +1,239 @@
+body {
+    overflow-x: hidden;
+}
+
+.header{
+    min-height: 4vw;
+    height: auto;
+    width: 100vw;
+    background-color: #fff;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.header-text{
+    font-size: 66px;
+}
+
+.header-right-btns{
+    float: right;
+}
+
+.waytocall{
+    display: none;
+}
+
+canvas{
+    margin-top: 20px;
+}
+
+.callmian{
+    text-align: center;
+}
+
+/* ============================================================================== */
+
+.put-result{
+    margin-top: 15px;
+    height: 30vw;
+    background-color: #fff;
+    border-style:solid;
+    border-width:1px;
+    border-radius: 8px;
+    font-size: 24px;
+    overflow-y: scroll;
+
+}
+
+.put-result-operate-area{
+    float: right;
+}
+
+.put-result-header{
+    margin-top: 24px;
+}
+
+.put-result-title{
+    float: left;
+}
+
+.put-result-head-text{
+    margin-left: 6px;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* ============================================================================== */
+
+
+/*.operate-area{
+    min-height: 8vw;
+    height: auto;
+    margin-top: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-style:solid;
+    border-width:1px;
+    border-radius: 8px;
+    font-size: 24px;
+    bottom: 0px;
+}*/
+
+/* ------------------ */
+
+.left-btns{
+    float: left;
+    width: 90%;
+}
+
+.left-btns button{
+    margin-top: 20px;
+    text-align: left;
+    width: 90%;
+}
+
+.right-btns{
+    float: right;
+}
+
+/* ============================================================================== */
+
+.start{
+    padding: 40px;
+}
+
+.start img{
+    width: 80px;
+    height: 80px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0px;
+    right: 6px;
+    left: 0px;
+}
+
+/* 所有按钮样式 */
+/* ============================================================================== */
+
+button {
+    background-color: #318cf4;  
+    color: #fff;
+    
+    border-style: none;
+    border-radius: 100px;
+    padding: 8px;
+}
+
+button [disabled]{
+    background-color: #595959;  
+}
+
+
+* {
+    box-sizing: border-box;
+}
+  
+  /* 修复按钮样式 */
+button {
+    background-color: #318cf4;  
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 8px;
+}
+  
+.input-div button {
+    width: 16%;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 !important;
+    border-radius: 0;
+    margin-left: 4px;
+}
+  
+.input-div input {
+    width: 80%;
+    height: 35px;
+    line-height: normal;
+    padding: 0 8px;
+    vertical-align: top;
+}
+
+.input-div{
+    margin-top: 10px;
+}
+
+.show-inputs{
+    width: 100%;
+}
+
+img:not(.black-svg-img){
+    filter: invert(100%)
+}
+
+.open-about{
+    display: none;
+}
+
+/* 窗口样式 */
+/* ============================================================================== */
+
+.window-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #00000042;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-body{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: auto;
+    height: 85%;
+    width: 85%;
+    text-align: center;
+    overflow-y: scroll;
+}
+/* ------------------ */
+.window-head{
+    font-size: 30px;
+}
+
+.window-title{
+    font-size: 30px;
+    float: left;
+}
+
+
+.window-right-close-btn{
+    float: right;
+}
+/* ------------------ */
+.window-maincontent{
+    margin-top: 30px;
+    text-align: left;
+}
+/* ------------------ */
+.window-footer{
+    position: fixed;
+    left: 0px;
+    bottom: 40px;
+    width: 100%;
+}
+
+textarea{
+    resize: none;
+}
