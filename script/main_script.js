@@ -13,9 +13,6 @@ g_peopleData.forEach((element) => {
     addInput(element);
 });
 
-$(".inputs-window").css("display","flex")
-$(".inputs-window-enter").click()
-
 
 if (g_PeopleCanRepeat!==null) g_nowIsTheCallMethod = Number(g_nowIsTheCallMethod);
 $(".callmian").children().eq(g_nowIsTheCallMethod).show();
@@ -375,4 +372,6 @@ $(document).ready(function () {
         }
 
     });
+
+    $(".inputs-window-enter").click()
 })
