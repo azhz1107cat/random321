@@ -1,4 +1,4 @@
-# RANDOM321.com 随机抽签器v1.0.0
+# RANDOM321.COM 随机抽签器v1.0.0
 
 作者 ZHZ
 
