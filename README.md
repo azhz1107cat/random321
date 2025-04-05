@@ -1,4 +1,4 @@
-# RANDOM 2025 随机抽签器v1.0.0
+# RANDOM321.com 随机抽签器v1.0.0
 
 作者 ZHZ
 
@@ -29,4 +29,4 @@
 
 遵循GNU协议
 
-文件地址 :  [https://github.com/azhz1107cat/random-demo](https://github.com/azhz1107cat/random-demo)
+文件地址 :  [https://github.com/azhz1107cat/random321](https://github.com/azhz1107cat/random321)
