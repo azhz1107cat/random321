@@ -7,7 +7,7 @@
 技术栈：
 JavaScript(JQuery)
 
-我知道Jquery是过时的技术，我想过用Vue重构，但放弃了(没时间)。目前该项目仍受维护(jQuery)
+我知道JQuery是过时的技术，我想过用Vue重构，但放弃了(没时间)。目前该项目仍受维护(JQuery)
 
 功能/优点：
 
@@ -20,7 +20,7 @@ JavaScript(JQuery)
 - 可以将抽取结果分组
 - 本地储存让您使用上次的数据（代抽签人员名单和个性化设置）
 
-导入的库：JQuery, font Awesome, SheetJs
+使用的库：JQuery, Font Awesome, SheetJs
 感谢这些库的开发者
 
 文件说明：
