@@ -4,9 +4,7 @@
 
 这是一个随机抽签器demo，用于学习，也可以作为工具实际使用，还请多多指导
 
-random321.com主页
-
-[在线体验](https://azhz1107cat.github.io/random321/)
+[random321.com](https://random321.com)主页
 
 技术栈：
 JavaScript(JQuery)
