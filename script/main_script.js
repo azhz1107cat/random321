@@ -1,7 +1,9 @@
 // 定义全局变量
-let g_peopleData = JSON.parse( localStorage.getItem("people") ) || [];
+let g_peopleData = JSON.parse( localStorage.getItem("people") ) || ['张三','李四','王五'];
 $('.make-inputs-from-storage').prop('disabled', g_peopleData.length === 0);
+
 let g_peopleList = [];
+
 let g_peopleNumberToCall = 0;
 let g_groupNumber = 1;
 let g_PeopleCanRepeat = false;
@@ -9,10 +11,7 @@ let g_UseSafe = false;
 let g_autoSaveList = true;
 let g_nowIsTheCallMethod = JSON.parse( localStorage.getItem("callmethod") );
 
-g_peopleData.forEach((element) => {
-    addInput(element);
-});
-
+g_peopleData.forEach(element => addInput(element))
 
 if (g_PeopleCanRepeat!==null) g_nowIsTheCallMethod = Number(g_nowIsTheCallMethod);
 $(".callmian").children().eq(g_nowIsTheCallMethod).show();
@@ -41,7 +40,6 @@ function callPeople() {
     })
 
     for (let i = 0; i < numToCallPeople; i++) {
-        
         randomResult.push(tempInputlist [ Math.floor( getRandom16Dec() * tempInputlist.length )]);
     }
 
@@ -235,7 +233,7 @@ $(document).ready(function () {
         else if(g_nowIsTheCallMethod === 1) rhStart();
         else if(g_nowIsTheCallMethod === 2){
             spin(tempInputlist, (result) => {
-                alert("指针指向：" + result);
+                page_infoWindow("指针指向：" , result);
             });
         };
     });
@@ -285,9 +283,9 @@ $(document).ready(function () {
     $(document).on("click", ".inputs-window .window-enter", function () {
         // 完成input-window
         $(".num-to-catch").text(g_peopleList.length);
-        let tempInputlist = g_peopleList.map((element)=>{
-            return $(element).children().first().val();
-        })
+        let tempInputlist = g_peopleList.map(element=> {
+            return $(element).children().first().val()
+        });
         localStorage.setItem('people', JSON.stringify(tempInputlist));
         $(this).parent().parent().parent().hide();
         // 绘制大转盘
@@ -331,7 +329,7 @@ $(document).ready(function () {
     $(document).on("click", ".make-inputs-from-text", async function () {
         // 从文本添加input框事件
         let textareaBoxText = await page_textareaBox("输入文本以转换为人员名单","输入文本以转换为人员名单");
-        if (textareaBoxText != "") {
+        if (textareaBoxText !== "") {
             if (textareaBoxText.endsWith('\n')) {
                 textareaBoxText = textareaBoxText.slice(0, -1);
             }

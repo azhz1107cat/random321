@@ -1,5 +1,5 @@
-/*  epWindow.js
- *  enhancedPageWindow v1.0.0 (c) 
+/*  PageWindowPP.js
+ *  PageWindow++ v1.0.0 (c)
  *  author zhz
  *  follow GNU
  *  import jQuery before use it

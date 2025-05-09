@@ -1,21 +1,39 @@
 body {
+    padding: 0;
     overflow-x: hidden;
+}
+
+.whole-main{
+    display: flex;
+    height: 60vw;
+}
+
+.left-main{
+    width: 70%;
+}
+
+.right-main{
+    width: 30%;
+}
+
+.right-main-top-btns{
+    width: 100%;
 }
 
 .header{
     min-height: 4vw;
     height: auto;
     width: 100vw;
-    background-color: #fff;
+    background-color: lavenderblush;
     text-align: left;
-    margin-bottom: 30px;
 }
 .header-text{
     font-size: 66px;
 }
 
-.header-right-btns{
+.info-button{
     float: right;
+    margin: 20px;
 }
 
 .waytocall{
@@ -30,92 +48,24 @@ canvas{
     text-align: center;
 }
 
-/* ============================================================================== */
-
-.put-result{
-    margin-top: 15px;
-    height: 30vw;
-    background-color: #fff;
-    border-style:solid;
-    border-width:1px;
-    border-radius: 8px;
-    font-size: 24px;
-    overflow-y: scroll;
-
+.div-can-repeat{
+    display: none;
 }
 
-.put-result-operate-area{
-    float: right;
-}
-
-.put-result-header{
-    margin-top: 24px;
-}
-
-.put-result-title{
-    float: left;
-}
-
-.put-result-head-text{
-    margin-left: 6px;
-    text-align: center;
-    font-size: 1em;
-}
-
-/* ============================================================================== */
-
-
-/*.operate-area{
-    min-height: 8vw;
-    height: auto;
-    margin-top: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-style:solid;
-    border-width:1px;
-    border-radius: 8px;
-    font-size: 24px;
-    bottom: 0px;
-}*/
-
-/* ------------------ */
-
-.left-btns{
-    float: left;
-    width: 90%;
-}
-
-.left-btns button{
-    margin-top: 20px;
-    text-align: left;
-    width: 90%;
-}
-
-.right-btns{
-    float: right;
+.div-ask-num-to-call{
+    display: none;
 }
 
 /* ============================================================================== */
 
 .start{
-    padding: 40px;
+    width: 60%;
+    padding: 10px;
 }
 
 .start img{
-    width: 80px;
-    height: 80px;
-}
-
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    position: fixed;
-    bottom: 0px;
-    right: 6px;
-    left: 0px;
+    width: 20px;
+    height: 20px;
 }
 
 /* 所有按钮样式 */
@@ -222,14 +172,14 @@ img:not(.black-svg-img){
     float: right;
 }
 /* ------------------ */
-.window-maincontent{
+.setting-maincontent{
     margin-top: 30px;
     text-align: left;
 }
 /* ------------------ */
 .window-footer{
     position: fixed;
-    left: 0px;
+    left: 0;
     bottom: 40px;
     width: 100%;
 }
