@@ -4,7 +4,7 @@ $('.make-inputs-from-storage').prop('disabled', g_peopleData.length === 0);
 
 let g_peopleList = [];
 
-let g_peopleNumberToCall = 0;
+let g_peopleNumberToCall = 1;
 let g_groupNumber = 1;
 let g_PeopleCanRepeat = false;
 let g_UseSafe = false;
@@ -205,21 +205,18 @@ $(document).ready(function () {
         })
         // 开始抽签事件
         let numberToCall = $(".get-number-to-call").val();
-        let groupToCall = $(".get-group-to-call").val();
-
         numberToCall = parseInt(numberToCall);
-        groupToCall = parseInt(groupToCall);
 
-        if (numberToCall == null || groupToCall == null || numberToCall == "" || groupToCall == "") {
+        if (numberToCall == null|| numberToCall == "" ) {
             page_infoWindow("错误", "输入框 不能为空");
             return;
-        } else if (typeof numberToCall!== 'number' || typeof groupToCall!== 'number') {
+        } else if (typeof numberToCall != 'number') {
             page_infoWindow("错误", "请检查 抽取人数与 组数，它们必须是数字");
             return;
-        } else if (!Number.isInteger(numberToCall) ||!Number.isInteger(groupToCall)) {
+        } else if (!Number.isInteger(numberToCall)) {
             page_infoWindow("错误", "请检查 抽取人数与 组数 使其为整数");
             return;
-        } else if (groupToCall < 1 || numberToCall < 1) {
+        } else if ( numberToCall < 1) {
             page_infoWindow("错误", "当前不可分组");
             return;
         }
@@ -259,11 +256,6 @@ $(document).ready(function () {
         $(".logging-window").css("display", "flex");
     })
 
-    $(document).on("click", ".open-setting", function () {
-        // 打开设置窗口
-        $(".setting-window").css("display", "flex");
-    });
-
     $(document).on("click", ".open-inputs", function () {
         // 打开inputs窗口
         $(".inputs-window").css("display", "flex");
@@ -272,12 +264,6 @@ $(document).ready(function () {
     $(document).on("click", ".window-close", function () {
         // 关闭窗口
         $(this).parent().parent().parent().hide();
-    });
-
-    $(document).on("click", ".setting-window .window-enter", function () {
-        // 完成setting-window
-        getRandom16Dec = g_UseSafe ? safeModel : unSafeModel;
-        $(this).parent().parent().parent().hide()
     });
 
     $(document).on("click", ".inputs-window .window-enter", function () {

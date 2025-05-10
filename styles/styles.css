@@ -21,8 +21,7 @@ body {
 }
 
 .header{
-    min-height: 4vw;
-    height: auto;
+    height: 10vw;
     width: 100vw;
     background-color: lavenderblush;
     text-align: left;
