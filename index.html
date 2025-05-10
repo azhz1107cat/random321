@@ -46,62 +46,89 @@
         </main>
 
         <main class="right-main">
-            <div class="right-main-top-btns">
-                <button class="reset">
-                    <img src="styles/FontAwesome/trash-can-solid.svg"  width="32" height="32"/>
-                    重来
-                </button>
 
-                <button class="change-call-mtd">
-                    <img src="styles/FontAwesome/arrows-rotate-solid.svg"  width="32" height="32"/>
-                    切换抽取方式
-                </button>
+            <table border="1">
+                <tr>
+                    <th>
+                        <button class="reset">
+                            <img src="styles/FontAwesome/trash-can-solid.svg"  width="32" height="32"/>
+                            重来
+                        </button>
+                    </th>
 
-                <button class="open-logging">
-                    <img src="styles/FontAwesome/file-regular.svg"  width="32" height="32"/>
-                    抽取历史
-                </button>
-            </div>
+                    <th>
+                        <button class="change-call-mtd">
+                            <img src="styles/FontAwesome/arrows-rotate-solid.svg"  width="32" height="32"/>
+                            切换抽取方式
+                        </button>
+                    </th>
 
-            <div class="setting-maincontent">
-                <div class="div-ask-num-to-call">
-                    <span>抽取人数</span><input type="number" class="get-number-to-call" value="1">
-                </div>
+                    <th>
+                        <button class="open-logging">
+                            <img src="styles/FontAwesome/file-regular.svg"  width="32" height="32"/>
+                            抽取历史
+                        </button>
+                    </th>
+                </tr>
 
-                <div class="div-can-repeat">
-                    <span><label for="canRepeat">可重复</label></span><input type="checkbox" id="canRepeat">
-                </div>
+                <tr>
+                    <td colspan="3">
+                        <div class="div-ask-num-to-call">
+                            <span>抽取人数</span><input type="number" class="get-number-to-call" value="1">
+                        </div>
+                    </td>
+                </tr>
 
-                <div>
-                    <span><label for="useSafe">使用更加安全的方法</label></span><input type="checkbox" id="useSafe" checked>
-                </div>
+                <tr>
+                    <td colspan="3">
+                        <div class="div-can-repeat">
+                            <span><label for="canRepeat">可重复</label></span><input type="checkbox" id="canRepeat">
+                        </div>
+                    </td>
+                </tr>
 
-                <div>
-                    <span><label for="autoSavePeopleList">自动保存待抽取人列表</label></span><input type="checkbox" id="autoSavePeopleList" checked>
-                </div>
+                <tr>
+                    <td colspan="3">
+                        <div>
+                            <span><label for="useSafe">使用更加安全的方法</label></span><input type="checkbox" id="useSafe" checked>
+                        </div>
+                    </td>
+                </tr>
 
-                <button class="open-about"></button>
-            </div>
+                <tr>
+                    <td colspan="3">
+                        <div>
+                            <span><label for="autoSavePeopleList">自动保存待抽取人列表</label></span><input type="checkbox" id="autoSavePeopleList" checked>
+                        </div>
+                    </td>
+                </tr>
 
-            <div class="">
-                <button class="open-inputs operate-button">
-                    <img src="styles/FontAwesome/bars-solid.svg" width="32" height="32"/>人员名单
-                    <span>
-                    现有
-                    <span class="num-to-catch">
-                        0
-                    </span>
-                    个待抽取对象
-                    </span>
-                </button>
-            </div>
+                <tr>
+                    <td colspan="3">
+                        <button class="open-inputs operate-button">
+                            <img src="styles/FontAwesome/bars-solid.svg" width="32" height="32"/>人员名单
+                            <span>现有<span class="num-to-catch">0</span>个待抽取对象</span>
+                        </button>
+                    </td>
+                </tr>
 
-            <div class="">
-                <button class="start operate-button">
-                    <img src="styles/FontAwesome/play-solid.svg" width="32" height="32"/>
-                    开始抽取
-                </button>
-            </div><br/>
+                <tr>
+                    <td colspan="3">
+                        <button class="start operate-button">
+                            <img src="styles/FontAwesome/play-solid.svg" width="32" height="32"/>
+                            开始抽取
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+
+            <button class="open-about"></button>
+
+            <div class=""></div>
+            <div class=""></div>
+
+            <br/>
 
 
             <div class="window-bg inputs-window">

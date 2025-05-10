@@ -48,12 +48,12 @@ canvas{
     text-align: center;
 }
 
-.div-can-repeat{
+.div-ask-num-to-call{
     display: none;
 }
 
-.div-ask-num-to-call{
-    display: none;
+table{
+    margin-top: 10vw;
 }
 
 /* ============================================================================== */
