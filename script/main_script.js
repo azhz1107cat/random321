@@ -9,11 +9,10 @@ let g_groupNumber = 1;
 let g_PeopleCanRepeat = false;
 let g_UseSafe = false;
 let g_autoSaveList = true;
-let g_nowIsTheCallMethod = JSON.parse( localStorage.getItem("callmethod") );
+let g_nowIsTheCallMethod = JSON.parse( localStorage.getItem("callmethod") ) || 2;
 
 g_peopleData.forEach(element => addInput(element))
 
-if (g_PeopleCanRepeat!==null) g_nowIsTheCallMethod = Number(g_nowIsTheCallMethod);
 $(".callmian").children().eq(g_nowIsTheCallMethod).show();
 
 let getRandom16Dec = g_UseSafe ? safeModel : unSafeModel;
