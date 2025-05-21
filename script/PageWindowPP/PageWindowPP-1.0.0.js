@@ -5,9 +5,9 @@
  *  import jQuery before use it
  */
 
-class Simplewindow{
+class SimpleWindow{
 
-    constructor(w_title="",w_content="",bgcolor="white"){
+    constructor(w_title="",w_content="",bg_color="white"){
 
         this.windowBG = $("<div></div>");
         this.windowBody = $("<div></div>");
@@ -33,7 +33,7 @@ class Simplewindow{
         this.windowBG.addClass('window-bg');
         this.windowBody.addClass('window-body');
         this.windowBG.css("display","flex");
-        this.windowBody.css("background-color",bgcolor);
+        this.windowBody.css("background-color",bg_color);
         this.windowBody.appendTo( this.windowBG );
 
         
@@ -48,9 +48,9 @@ class Simplewindow{
     }
 }
 
-class WindowWithYesNO extends Simplewindow{
-    constructor(w_title="",w_content="",bgcolor="white"){
-        super(w_title,w_content,bgcolor);
+class WindowWithYesNO extends SimpleWindow{
+    constructor(w_title="",w_content="",bg_color="white"){
+        super(w_title,w_content,bg_color);
         this.certain = false;
         this.windowCancle.on("click",(event) => {
              this.certain = false ;
@@ -78,8 +78,8 @@ class WindowWithYesNO extends Simplewindow{
 
 
 class TextareaBox extends WindowWithYesNO {
-    constructor(w_title = "", w_content = "", bgcolor = "white", textarea_value = "") {
-        super(w_title, w_content, bgcolor);
+    constructor(w_title = "", w_content = "", bg_color = "white", textarea_value = "") {
+        super(w_title, w_content, bg_color);
         this.value = "";
         this.inputElement = $("<textarea></textarea>");
         this.inputElement.css("width", "200px");
@@ -100,12 +100,12 @@ class TextareaBox extends WindowWithYesNO {
 }
 
 class ChooseBox extends WindowWithYesNO {
-    constructor(w_title = "", w_content = "", bgcolor = "white", chooseList = []) {
-        super(w_title, w_content, bgcolor);
+    constructor(w_title = "", w_content = "", bg_color = "white", chooseList = []) {
+        super(w_title, w_content, bg_color);
         this.value = "";
         chooseList.forEach((element, index) => {
             const radioId = `radio-${index}`;
-            const radio = $(`<input type="radio" name="mychoose" id="${radioId}"/>`);
+            const radio = $(`<input type="radio" name="my_choose" id="${radioId}"/>`);
             const label = $(`<label for="${radioId}">${element}</label>`);
             if (index === 0) {
                 radio.prop('checked', true); // 设置第一个选项为默认选中
@@ -117,7 +117,7 @@ class ChooseBox extends WindowWithYesNO {
         });
 
         this.yesBtn.on("click", (event) => {
-            this.value = this.windowMain.find('input[type="radio"][name="mychoose"]:checked').val();
+            this.value = this.windowMain.find('input[type="radio"][name="my_choose"]:checked').val();
             $(event.currentTarget).parent().parent().parent().remove();
         })
 
@@ -131,7 +131,7 @@ class ChooseBox extends WindowWithYesNO {
 
 
 function page_infoWindow(w_title, w_content) {
-    let _infoWindow = new Simplewindow(w_title, w_content);
+    let _infoWindow = new SimpleWindow(w_title, w_content);
     _infoWindow.show();
 }
 
@@ -166,9 +166,9 @@ function page_textareaBox(title = "", content = "", color = "", input_value = ""
     });
 }
 
-function page_chooseBox(title = "", content = "", color = "", listinput) {
+function page_chooseBox(title = "", content = "", color = "", list_input) {
     return new Promise((resolve) => {
-        let _chooseBox = new ChooseBox(title, content, color, listinput);
+        let _chooseBox = new ChooseBox(title, content, color, list_input);
         _chooseBox.show();
 
         const handleClose = () => {
