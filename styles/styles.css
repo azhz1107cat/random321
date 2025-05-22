@@ -131,6 +131,10 @@ img:not(.black-svg-img){
     display: none;
 }
 
+.logging-window .window-maincontent{
+    text-align: left;
+}
+
 /* 窗口样式 */
 /* ============================================================================== */
 

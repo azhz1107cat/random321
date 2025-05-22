@@ -229,9 +229,10 @@ $(document).ready(function () {
         else if(g_nowIsTheCallMethod === 1) rhStart();
         else if(g_nowIsTheCallMethod === 2){
             spin(tempInputlist, (result) => {
-                page_infoWindow("指针指向：" , result);
+                page_infoWindow("指针指向：" , `<br/><h1>${result}</h1>`);
+                $(".show-logging").prepend(`${result}<br/>`);
             });
-        };
+        }
     });
 
     $(document).on("click", ".change-call-mtd", function(){
