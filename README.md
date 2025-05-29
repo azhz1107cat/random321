@@ -27,7 +27,7 @@ JavaScript(JQuery)
 
 文件说明：
 
-- epWindow.js 封装了生成简单的界面弹窗的函数
+- PageWindowPP.js 封装了生成简单的界面弹窗的函数
 - main_script.js 是项目的核心
 - index.html与styles.css 不用多说了
 - JQuery FontAwesome SheetJs 文件夹存放了这些库
