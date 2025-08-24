@@ -1,12 +1,10 @@
 // 抽签方式
-function unSafeModel() {
+function unsafeModel() {
     return Number(Math.random().toFixed(16));
 }
 
 function safeModel() {
-    const num16array = new Uint32Array(1);
-    crypto.getRandomValues(num16array);
-    const randomFraction = num16array[0] / Math.pow(2, 32);
+    const randomFraction = rando.float();
     return Number(randomFraction.toFixed(16));
 }
 

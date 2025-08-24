@@ -15,7 +15,7 @@ g_peopleData.forEach(element => addInput(element))
 
 $(".callmian").children().eq(g_nowIsTheCallMethod).show();
 
-let getRandom16Dec = g_UseSafe ? safeModel : unSafeModel;
+let getRandom16Dec = g_UseSafe ? safeModel : unsafeModel;
 
 function rhStart(){
     let span = $("<span></span>");
@@ -60,7 +60,7 @@ function addInput(inputValue = "") {
     g_peopleList.push(wholeInputDiv[0]);
 }
 
-function showRandomReslut(list) {
+function showRandomResult(list) {
     // 展示抽取结果
     const showResultMain = $(".put-result-main");
 
@@ -225,11 +225,12 @@ $(document).ready(function () {
             return;
         }
 
-        if(g_nowIsTheCallMethod === 0) showRandomReslut(callPeople());
+        if(g_nowIsTheCallMethod === 0) showRandomResult(callPeople());
         else if(g_nowIsTheCallMethod === 1) rhStart();
         else if(g_nowIsTheCallMethod === 2){
             spin(tempInputlist, (result) => {
-                page_infoWindow("指针指向：" , `<br/><h1>${result}</h1>`);
+                $(".canvas-result").text(`抽取到: ${result}`)
+                $(".put-canvas-result").fadeIn(500);
                 $(".show-logging").prepend(`${result}<br/>`);
             });
         }

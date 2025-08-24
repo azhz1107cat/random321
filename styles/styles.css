@@ -22,12 +22,13 @@ body {
 }
 
 .header{
-    height: 10vw;
+    padding: 20px;
     width: 100vw;
     background-color: lavenderblush;
     text-align: left;
 }
 .header-text{
+    font-family: Verdana, fangsong;
     font-size: 66px;
 }
 
@@ -37,11 +38,32 @@ body {
 }
 
 .waytocall{
+    position: relative;
     display: none;
 }
 
 canvas{
     margin-top: 20px;
+}
+
+.put-canvas-result{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: auto;
+    height: 40px;
+    background: white;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 4px;
+}
+
+.canvas-result{
+    font-size: xx-large !important;
 }
 
 .callmian{

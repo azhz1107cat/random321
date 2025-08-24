@@ -16,7 +16,7 @@
 <body>
     <div class="header">
         <span class="header-text">
-            Random321.com
+            <b>随机点名器</b>
         </span>
         <button class="info-button" onclick="$('.open-about').click()">
             <img src="styles/FontAwesome/circle-info-solid.svg"  width="36" height="36"/>
@@ -39,6 +39,9 @@
                 </div>
 
                 <div class="waytocall useAnime-tt">
+                    <div class="put-canvas-result">
+                        <span class="canvas-result"></span>
+                    </div>
                     <canvas width="400" height="400">
                         您的浏览器不支持canvas(不支持大转盘)
                     </canvas>
@@ -234,7 +237,7 @@
     </main>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/rando.js@2.0.6/dist/rando.min.js"></script>
     <script src="script/include.js"></script>
     <script src="script/SheetJs/xlsx.full.min.js"></script>
     <script src="script/main_script.js"></script>
